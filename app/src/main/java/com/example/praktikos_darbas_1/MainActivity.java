@@ -1,6 +1,8 @@
 package com.example.praktikos_darbas_1;
 
 import android.os.Bundle;
+import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,6 +11,9 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
+
+    private Button changeTextButton;
+    private TextView changeTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,5 +25,14 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        changeTextButton = findViewById(R.id.buttonChangeText);
+        changeTextView = findViewById(R.id.textView);
+
+        changeTextButton.setOnClickListener(view -> {
+            changeTextView.setText(R.string.textViewUpdatedText);
+        });
     }
+
+
 }

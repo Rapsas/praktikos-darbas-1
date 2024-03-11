@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">praktikos-darbas-1</string>
+    <string name="textViewUpdatedText">Naujas, sio pasaulio dar neregejas tekstas</string>
 </resources>
