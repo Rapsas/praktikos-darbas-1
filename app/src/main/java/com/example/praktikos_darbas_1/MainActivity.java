@@ -1,5 +1,6 @@
 package com.example.praktikos_darbas_1;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
@@ -10,10 +11,14 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import java.util.Random;
+
 public class MainActivity extends AppCompatActivity {
 
     private Button changeTextButton;
     private TextView changeTextView;
+    private  Button changeColorButton;
+    private final Random random = new Random();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,9 +33,15 @@ public class MainActivity extends AppCompatActivity {
 
         changeTextButton = findViewById(R.id.buttonChangeText);
         changeTextView = findViewById(R.id.textView);
+        changeColorButton = findViewById(R.id.buttonChangeColor);
 
         changeTextButton.setOnClickListener(view -> {
             changeTextView.setText(R.string.textViewUpdatedText);
+        });
+
+        changeColorButton.setOnClickListener(view -> {
+            changeTextView.setTextColor(Color.argb(255, random.nextInt(256),
+                    random.nextInt(256), random.nextInt(256)));
         });
     }
 
