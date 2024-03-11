@@ -14,7 +14,7 @@ import androidx.core.view.WindowInsetsCompat;
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
-    //WHAT EVER YOU DONT COMMIT THIS COMMENT
+
     private Button changeTextButton;
     private TextView changeTextView;
     private  Button changeColorButton;
